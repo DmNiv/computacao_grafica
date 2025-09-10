@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cefu75dc2xv2b"]
+
+[ext_resource type="Script" uid="uid://d0h47myho8jet" path="res://grid/pixel_editor.gd" id="1_l4d52"]
+
+[node name="PixelEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 51.0
+offset_bottom = 51.0
+script = ExtResource("1_l4d52")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 51.0
+offset_bottom = 51.0

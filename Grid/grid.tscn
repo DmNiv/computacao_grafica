@@ -1,10 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://q6153k5yckjo"]
+[gd_scene load_steps=3 format=3 uid="uid://dycr4e4w4vm47"]
 
-[ext_resource type="Script" uid="uid://c883rn1adj2ra" path="res://grid/grid.gd" id="1_ppiwg"]
-[ext_resource type="PackedScene" uid="uid://ba0pc1j82qnol" path="res://pixel/pixel.tscn" id="1_rmmet"]
+[ext_resource type="PackedScene" uid="uid://cov0fb4q0la1e" path="res://pixel/pixel.tscn" id="1_rmmet"]
+
+[sub_resource type="GDScript" id="GDScript_rmmet"]
+script/source = "extends Node2D
+
+@onready var pixels: Node = $Pixels
+
+@onready var list_pixels = pixels.get_children()
+var matrix : Vector2
+
+func _ready() -> void:
+	var linha = -10
+	var coluna = -10
+	for pixel in list_pixels: 
+		pixel.position = Vector2(linha, coluna)
+		linha += 1
+		if linha == 11:
+			linha = -10
+			coluna += 1
+"
 
 [node name="Grid" type="Node2D"]
-script = ExtResource("1_ppiwg")
+script = SubResource("GDScript_rmmet")
 
 [node name="Pixels" type="Node" parent="."]
 
