@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://m11ifc3ol3bb"]
+
+[ext_resource type="Script" uid="uid://bvn2a4m8avhho" path="res://points/point_input.gd" id="1_hkkw8"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+offset_right = 283.0
+offset_bottom = 45.0
+size_flags_vertical = 4
+alignment = 1
+script = ExtResource("1_hkkw8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEditX" type="LineEdit" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = ","
+
+[node name="LineEditY" type="LineEdit" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "X"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
