@@ -1,6 +1,6 @@
 extends Control
 
-var point_scene = preload("res://points/point_input.tscn")
+var point_scene = preload("res://point/point_input.tscn")
 @onready var v_box_container: VBoxContainer = $VBoxContainer
 var available_letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"]
 var points = []
@@ -39,4 +39,3 @@ func _update_point_names():
 		point.label_text = "Ponto " + all_letters[current_letter_index] + ":"
 		# Atualiza o texto do Label dentro da cena de ponto
 		current_letter_index += 1
-		print("aaaaaaaiiiiii")

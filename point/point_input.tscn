@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://m11ifc3ol3bb"]
 
-[ext_resource type="Script" uid="uid://bvn2a4m8avhho" path="res://points/point_input.gd" id="1_hkkw8"]
+[ext_resource type="Script" uid="uid://bvn2a4m8avhho" path="res://point/point_input.gd" id="1_hkkw8"]
 
 [node name="HBoxContainer" type="HBoxContainer"]
 offset_right = 283.0
@@ -37,4 +37,6 @@ layout_mode = 2
 layout_mode = 2
 text = "X"
 
+[connection signal="text_submitted" from="MarginContainer/HBoxContainer/LineEditX" to="." method="_on_line_edit_x_text_submitted"]
+[connection signal="text_submitted" from="MarginContainer/HBoxContainer/LineEditY" to="." method="_on_line_edit_y_text_submitted"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]

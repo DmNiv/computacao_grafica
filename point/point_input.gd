@@ -11,19 +11,20 @@ signal point_removed(point)
 
 func _ready() -> void:
 	label.text = label_text
+	line_edit_x.text = "0"
+	line_edit_y.text = "0"
 
-func get_point_coordinates() -> Vector2:
-	var x = 0.0
-	var y = 0.0
-	
-	# Tenta converter o texto dos campos de entrada para números
-	if not line_edit_x.text.is_empty():
-		x = float(line_edit_x.text)
-	if not line_edit_y.text.is_empty():
-		y = float(line_edit_y.text)
-	
-	return Vector2(x, y)
+func get_pixel(x, y):
+	x = int(x)
+	y = int(y)
 
 func _on_button_pressed() -> void:
 	emit_signal("point_removed", self)
 	queue_free()
+
+func _on_line_edit_x_text_submitted(new_text: String) -> void:
+	pass # Replace with function body.
+
+
+func _on_line_edit_y_text_submitted(new_text: String) -> void:
+	pass # Replace with function body.

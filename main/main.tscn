@@ -1,9 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4brpx4c233pr"]
 
 [ext_resource type="Script" uid="uid://ds4wll68m65vu" path="res://main/main.gd" id="1_53q0u"]
-[ext_resource type="PackedScene" uid="uid://q6153k5yckjo" path="res://Grid/grid.tscn" id="2_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://q6153k5yckjo" path="res://grid/grid.tscn" id="2_pjrb6"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_53q0u")
 
 [node name="Grid" parent="." instance=ExtResource("2_pjrb6")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
